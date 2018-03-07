@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/addact_linearlayout"
+    android:orientation="vertical"
+    android:background="@mipmap/dusk_ver"
+    tools:context="com.example.ruanx.cashbook.AddItemActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/additem_ok"
+                android:background="@mipmap/ok"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="10sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp" />
+
+            <Button
+                android:id="@+id/cancel_add"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10sp"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:background="@mipmap/back"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="10sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="¥"
+                android:textSize="60sp"
+                android:layout_marginLeft="20sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/number_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/white"
+                android:background="@null"
+                android:textAlignment="textEnd"
+                android:layout_marginRight="20sp"
+                android:textSize="60sp"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20sp"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"
+            android:background="@color/whiteopa">
+
+            <TextView
+                android:id="@+id/label_cycle"
+                android:layout_width="wrap_content"
+                android:text="分类"
+                android:background="@drawable/shape3"
+                android:gravity="center"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_goneMarginLeft="20sp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="支出"
+                android:id="@+id/shouzhi_tv"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_marginStart="10sp"
+                app:layout_constraintLeft_toRightOf="@+id/label_cycle"
+                app:layout_constraintTop_toTopOf="@+id/label_cycle"
+                android:textColor="@color/weight"
+                app:layout_constraintBottom_toBottomOf="@+id/label_cycle"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+         <!--   <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/gang1"
+                android:text="-"
+                android:textColor="@color/weight"
+                app:layout_constraintLeft_toRightOf="@+id/shouzhi_tv"
+                app:layout_constraintTop_toTopOf="@+id/label_cycle"
+                app:layout_constraintBottom_toBottomOf="@+id/label_cycle"
+                android:paddingLeft="5sp"
+                android:paddingRight="5sp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />  -->
+
+            <TextView
+                android:id="@+id/label_tv"
+                android:layout_width="wrap_content"
+                android:text="购物消费"
+                app:layout_constraintLeft_toRightOf="@+id/label_cycle"
+                app:layout_constraintTop_toTopOf="@+id/label_cycle"
+                app:layout_constraintBottom_toBottomOf="@+id/label_cycle"
+                android:textColor="@color/weight"
+                android:layout_marginLeft="10sp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/gang2"
+                android:layout_width="wrap_content"
+                android:text="-"
+                app:layout_constraintLeft_toRightOf="@id/label_tv"
+                app:layout_constraintTop_toTopOf="@+id/label_cycle"
+                app:layout_constraintBottom_toBottomOf="@+id/label_cycle"
+                android:textColor="@color/weight"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/subtype_tv"
+                android:layout_width="wrap_content"
+                android:text="日常用品"
+                app:layout_constraintLeft_toRightOf="@id/gang2"
+                app:layout_constraintTop_toTopOf="@+id/label_cycle"
+                app:layout_constraintBottom_toBottomOf="@+id/label_cycle"
+                android:textColor="@color/weight"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/weight"
+                android:layout_marginRight="20sp"
+                android:id="@+id/chooser_label"
+                app:layout_constraintTop_toTopOf="@+id/label_cycle"
+                app:layout_constraintBottom_toBottomOf="@id/label_cycle"
+                android:textSize="18sp"
+                android:background="#00000000"
+                android:text="选择标签  > "
+                android:layout_marginEnd="10sp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"
+            android:paddingTop="20sp"
+            android:background="@color/whiteopa">
+
+            <TextView
+                android:id="@+id/date_cycle"
+                android:layout_width="wrap_content"
+                android:text="日期"
+                android:background="@drawable/shape3"
+                android:gravity="center"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_goneMarginLeft="20sp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/date_cycle"
+                app:layout_constraintTop_toTopOf="@id/date_cycle"
+                app:layout_constraintBottom_toBottomOf="@id/date_cycle"
+                android:textSize="18sp"
+                android:layout_marginLeft="10sp"
+                android:textColor="@color/weight"
+                android:text="9876-54-32"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/weight"
+                android:layout_marginRight="20sp"
+                android:id="@+id/date_btn"
+                app:layout_constraintTop_toTopOf="@+id/date_cycle"
+                app:layout_constraintBottom_toBottomOf="@id/date_cycle"
+                android:textSize="18sp"
+                android:background="#00000000"
+                android:text="选择日期  > "
+                android:layout_marginEnd="10sp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/whiteopa"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"
+            android:paddingTop="20sp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/beizhu_cycle"
+                android:layout_width="wrap_content"
+                android:text="备注"
+                android:background="@drawable/shape3"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/comments_et"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_marginLeft="10sp"
+                android:background="@null"
+                android:hint="添加备注" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/whiteopa"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

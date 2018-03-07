@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/dusk_ver"
+    android:id="@+id/actvity_exchange_ll"
+    tools:context="com.example.ruanx.cashbook.ExchangeActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginLeft="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30sp"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:background="@mipmap/back"
+            android:id="@+id/ex_to_main"/>
+
+        <TextView
+            android:textSize="20sp"
+            android:textColor="@color/whiteopa"
+            android:text="汇率助手"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ex_to_main"
+            app:layout_constraintBottom_toBottomOf="@+id/ex_to_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:padding="10sp"
+        android:id="@+id/latest_time"
+        android:background="@color/whiteopa"
+        android:textAlignment="center"
+        android:text="正在查询，这可能要花几分钟时间，请稍候"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/whiteopa"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/china_tv"
+            android:text="人民币"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="25sp"
+            android:textColor="#505050"
+            android:layout_marginLeft="20sp"
+            app:layout_constraintTop_toTopOf="@+id/exchange_input_et"
+            app:layout_constraintBottom_toBottomOf="@+id/exchange_input_et"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/exchange_input_et"
+            android:inputType="numberDecimal"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@null"
+            android:text="100"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/orange"
+            android:textAlignment="center"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/exchange_btn"
+            android:text="转换"
+            android:textSize="20sp"
+            android:background="@drawable/button"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginRight="20sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:background="@color/whiteopa"
+        android:layout_height="0dp">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_exchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+    </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

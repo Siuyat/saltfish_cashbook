@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ruanx.cashbook.MainActivity"
+    android:orientation="vertical"
+    android:paddingTop="10sp"
+    android:background="@color/qianhui"
+    android:paddingBottom="10sp"
+    android:paddingLeft="10sp"
+    android:paddingRight="10sp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/main_item_image"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="3sp"
+        android:src="@drawable/ic_action_sun"/>
+
+    <TextView
+        android:id="@+id/label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="居家生活"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/weight"
+        android:layout_marginStart="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/main_item_image" />
+
+
+    <TextView
+        android:id="@+id/subtyp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4sp"
+        android:text="物业水电煤"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/weight"
+        android:layout_marginLeft="10sp"
+        app:layout_constraintLeft_toRightOf="@id/label_tv" />
+
+    <TextView
+        android:id="@+id/itemdate_tv"
+        android:textSize="15sp"
+        android:textColor="@color/weight"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10sp"
+        android:text="7012-21-32"
+        app:layout_constraintTop_toBottomOf="@+id/label_tv"
+        app:layout_constraintLeft_toRightOf="@+id/main_item_image"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/itemcomment_tv"
+        app:layout_constraintLeft_toRightOf="@+id/itemdate_tv"
+        android:layout_marginLeft="10sp"
+        app:layout_constraintTop_toBottomOf="@id/label_tv"
+        android:text="this is a comment"
+        android:textColor="@color/weight"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/money_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="321"
+        android:textColor="@color/item_info_black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/label_tv"
+        android:layout_marginRight="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemdate_tv"
+         />
+
+    <View
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemdate_tv"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_height="1dp">
+    </View>
+
+</android.support.constraint.ConstraintLayout>

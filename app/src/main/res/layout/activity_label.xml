@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/dusk_ver"
+    android:layout_height="match_parent"
+    tools:context="com.example.ruanx.cashbook.LabelActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_marginTop="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/back_from_label"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10sp"
+            android:background="@mipmap/back"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="选择分类"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/whiteopa"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_marginTop="130sp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/zhichu_btn"
+                android:textColor="@color/whiteopa"
+                android:padding="5sp"
+                android:textSize="35sp"
+                android:text="支出"
+                android:background="#00000000"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="5sp"
+                android:layout_marginTop="10sp"
+                android:id="@+id/shouru_btn"
+                android:textColor="@color/whiteopa"
+                android:textSize="25sp"
+                android:text="收入"
+                android:background="#00000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/label_ll"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="match_parent">
+            </ListView>
+
+            <ListView
+                android:id="@+id/label_ll2"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

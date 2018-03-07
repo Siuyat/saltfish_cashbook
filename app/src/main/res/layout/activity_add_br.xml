@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@mipmap/dusk_ver"
+    android:id="@+id/addact_br_linearlayout"
+    tools:context="com.example.ruanx.cashbook.AddBRActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/addbr_ok"
+            android:background="@mipmap/ok"
+            android:layout_width="30sp"
+            android:layout_marginTop="30sp"
+            android:layout_marginRight="10sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="30sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/addbr_ok"
+            app:layout_constraintBottom_toBottomOf="@id/addbr_ok"
+            android:id="@+id/isborrowRG"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/borrow"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="借入" />
+            <RadioButton
+                android:id="@+id/rent"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="借出"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/cancel_br"
+            android:background="@mipmap/back"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="30sp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/cancel_br"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="¥"
+            android:textSize="60sp"
+            android:layout_marginLeft="20sp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/money_br"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:text=""
+            android:layout_marginRight="20sp"
+            android:background="@null"
+            app:layout_constraintTop_toBottomOf="@+id/cancel_br"
+            android:textAlignment="textEnd"
+            android:inputType="numberDecimal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/whiteopa"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="20sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="名称"
+            android:background="@drawable/shape3"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/hisName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginLeft="10sp"
+            android:background="@null"
+            android:hint="对方名称" />
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="20sp"
+        android:background="@color/whiteopa">
+
+        <TextView
+            android:id="@+id/date_cycle2"
+            android:layout_width="wrap_content"
+            android:text="日期"
+            android:background="@drawable/shape3"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_goneMarginLeft="20sp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/date_br_tv"
+            android:layout_width="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/date_cycle2"
+            app:layout_constraintTop_toTopOf="@id/date_cycle2"
+            app:layout_constraintBottom_toBottomOf="@id/date_cycle2"
+            android:textSize="18sp"
+            android:layout_marginLeft="10sp"
+            android:textColor="@color/weight"
+            android:text="9876-54-32"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/weight"
+            android:layout_marginRight="20sp"
+            android:id="@+id/date_br"
+            app:layout_constraintTop_toTopOf="@+id/date_cycle2"
+            app:layout_constraintBottom_toBottomOf="@id/date_cycle2"
+            android:textSize="18sp"
+            android:background="#00000000"
+            android:text="选择日期  > "
+            android:layout_marginEnd="10sp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/whiteopa"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="20sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="备注"
+            android:background="@drawable/shape3"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/comments_br"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginLeft="10sp"
+            android:background="@null"
+            android:hint="添加备注" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/whiteopa"
+        android:layout_weight="1">
+
+    </LinearLayout>
+
+</LinearLayout>

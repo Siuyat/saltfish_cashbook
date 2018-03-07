@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/infoact_constraintlayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/forest_b_ver"
+    tools:context="com.example.ruanx.cashbook.ItemInfoActivity">
+
+    <Button
+        android:id="@+id/info_edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:text="edit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="10sp"
+        android:textSize="30sp"
+        android:textColor="@color/whiteopa"/>
+
+    <Button
+        android:id="@+id/info_back_btn"
+        android:text="back"
+        android:textColor="@color/whiteopa"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="30sp"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/info_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7012-21-32"
+        android:textColor="@color/whiteopa"
+        app:layout_constraintLeft_toLeftOf="@id/info_label_tv"
+        app:layout_constraintBottom_toTopOf="@+id/info_label_tv"
+        android:layout_marginBottom="10sp"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/info_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/whiteopa"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/info_money_tv"
+        android:layout_marginBottom="20sp"
+        android:text="在娱乐上支出了"/>
+
+    <TextView
+        android:id="@+id/info_money_tv"
+        android:textSize="70sp"
+        android:text="93.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/whiteopa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="25sp"
+        android:text="元"
+        android:textColor="@color/whiteopa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/info_money_tv"
+        app:layout_constraintLeft_toRightOf="@+id/info_money_tv"
+        android:layout_marginLeft="5sp"
+        android:layout_marginBottom="15sp"/>
+
+    <TextView
+        android:id="@+id/info_comments_tv"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:gravity="top|left"
+        android:textColor="@color/whiteopa"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_label_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="comments"/>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/forest_b_ver"
+    android:id="@+id/actvity_view_vr_ll"
+    tools:context="com.example.ruanx.cashbook.ViewBrActivity">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="30sp"
+            android:layout_height="30sp">
+
+            <Button
+                android:id="@+id/br_to_main"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:background="@mipmap/back"
+                android:layout_marginLeft="10sp"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="借款管理"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/br_to_main"
+                app:layout_constraintBottom_toBottomOf="@id/br_to_main"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/add_br_item"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginRight="10sp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@mipmap/add_btn"/>
+
+        </android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/white"
+                    android:id="@+id/haiyinghuankuan"
+                    android:textSize="18sp"
+                    android:text="还应还款"/>
+
+                <TextView
+                    android:id="@+id/money_bor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/haiyinghuankuan"
+                    android:layout_marginTop="10sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="30sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="88"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textSize="18sp"
+                    android:id="@+id/haiyingshouqu"
+                    android:layout_height="wrap_content"
+                    android:text="还应收取"/>
+
+                <TextView
+                    android:id="@+id/money_ren"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/haiyingshouqu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:textSize="30sp"
+                    android:text="88"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_br"
+        android:layout_marginTop="20dp"
+        android:background="@color/whiteopa2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

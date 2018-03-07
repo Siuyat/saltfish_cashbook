@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/selact_linearlayout"
+    android:background="@mipmap/dusk_ver"
+    android:layout_height="match_parent"
+    tools:context="com.example.ruanx.cashbook.selectLabelActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_marginTop="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/back_from_select"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10sp"
+            android:background="@mipmap/back"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="收支分类"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/whiteopa"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp"
+        android:background="@color/white"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:background="@color/lightGray"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/listview_select"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30sp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </ListView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:padding="20dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textv_select_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/skyblue"
+                android:gravity="center"
+                android:text="购物消费"/>
+
+            <ListView
+                android:id="@+id/listview_selectsub"
+                android:layout_marginTop="20sp"
+                android:layout_width="match_parent"
+                android:background="@color/whiteopa"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </ListView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#F596AA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="item_info_black">#D5000000</color>
+    <color name="weight">#8A000000</color>
+    <color name="line">#1E000000</color>
+    <color name="background_gray">#AAAAAAAA</color>
+    <color name="qingdan">#516E41</color>
+    <color name="shenxiangcha">#4F726C</color>
+    <color name="sabiasagi">#6699A1</color>
+    <color name="liuran">#91AD70</color>
+    <color name="hiwamoegi">#90B44B</color>
+    <color name="whiteopa">#ddFFFFFF</color>
+    <color name="whiteopa2">#ccffffff</color>
+    <color name="qianhui">#EEEEEE</color>
+    <color name="lightGray">#F4F4F4</color>
+    <color name="orange">#FFA500</color>
+    <color name="skyblue">#7Db9de</color>
+    <color name="skyblueopa">#777db9de</color>
+    <color name="momo">#F596AA</color>
+    <color name="sangosyu">#F17C67</color>
+</resources>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/actact_linearlayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/liuran"
+    android:layout_height="match_parent"
+    tools:context="com.example.ruanx.cashbook.AccountActivity">
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30sp"
+        android:layout_height="28sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="年度汇总"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/whiteopa"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="28sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/back_from_account"
+            android:layout_marginLeft="10sp"
+            android:background="@mipmap/back"
+            android:layout_height="28sp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp">
+
+        <Button
+            android:layout_height="20sp"
+            android:layout_width="20dp"
+            android:id="@+id/before"
+            app:layout_constraintRight_toLeftOf="@+id/account_year"
+            app:layout_constraintTop_toTopOf="@+id/account_year"
+            android:layout_marginRight="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/account_year"
+            android:background="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/account_year"
+            android:text="2017"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/whiteopa"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10sp"/>
+
+        <Button
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:id="@+id/next"
+            app:layout_constraintLeft_toRightOf="@+id/account_year"
+            app:layout_constraintTop_toTopOf="@+id/account_year"
+            app:layout_constraintBottom_toBottomOf="@+id/account_year"
+            android:layout_marginLeft="20sp"
+            android:background="@mipmap/next" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:background="@color/qianhui"
+        android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="4">
+
+
+        <lecho.lib.hellocharts.view.LineChartView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/linechart"
+            android:layout_marginTop="10sp"
+            android:paddingTop="10sp"
+            android:paddingLeft="20sp"
+            android:paddingRight="20sp"
+            android:layout_height="0dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:background="@color/qianhui"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:id="@+id/sr"
+        android:text="收入"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toLeftOf="@+id/zc"
+        android:gravity="center"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/shape3" />
+
+    <TextView
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:id="@+id/zc"
+        android:text="支出"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/shape4"
+        android:textSize="15sp"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/zc"
+        android:textColor="@color/white"
+        android:id="@+id/jy"
+        android:text="结余"
+        android:textSize="15sp"
+        android:background="@drawable/shape5"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sr1"
+        android:text="0"
+        android:textSize="18sp"
+        android:textColor="@color/skyblue"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="@+id/sr"
+        app:layout_constraintTop_toBottomOf="@+id/sr"
+        app:layout_constraintRight_toRightOf="@+id/sr"
+        android:layout_marginTop="3sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zc1"
+        android:text="0"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="@+id/zc"
+        app:layout_constraintRight_toRightOf="@+id/zc"
+        app:layout_constraintTop_toBottomOf="@+id/zc"
+        android:layout_marginTop="3sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/jy1"
+        android:text="0"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="@+id/jy"
+        app:layout_constraintLeft_toLeftOf="@+id/jy"
+        android:textColor="@color/orange"
+        app:layout_constraintTop_toBottomOf="@+id/jy"
+        android:layout_marginTop="3sp"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/white"
+         android:layout_marginTop="8sp"
+         app:layout_constraintTop_toBottomOf="@+id/fjx"
+         android:id="@+id/account_lin">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:id="@+id/yf"
+        android:text="月份"
+        android:textSize="20sp"
+        android:layout_weight="2"
+        android:textAlignment="textStart"
+        android:paddingLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sr2"
+        android:text="收入"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/zc2"
+        android:text="支出"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/jy2"
+        android:text="结余"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        />
+     </LinearLayout>
+</LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginBottom="20sp"
+        android:id="@+id/rec">
+
+    </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</LinearLayout>
